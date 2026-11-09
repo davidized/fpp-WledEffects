@@ -151,3 +151,38 @@
     flex-wrap: nowrap;
     place-content: center;
 }
+
+/* Dark mode: FPP 10 sets data-bs-theme="dark" on <html> from the OS preference.
+   Swap the hardcoded light colors above for Bootstrap's theme variables. */
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Toggle{
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Selections:after{
+  background: linear-gradient(transparent, var(--bs-secondary-bg));
+}
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Selections label{
+  color: var(--bs-secondary-color);
+}
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Selections.open label,
+[data-bs-theme="dark"] #fpp-WledEffects-systems label{
+  border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Selections.open label:hover,
+[data-bs-theme="dark"] #fpp-WledEffects-systems label:hover{
+  border-color: #6c757d;
+  background-color: var(--bs-tertiary-bg);
+}
+[data-bs-theme="dark"] .fpp-WledEffects-Model-Selections.open label.selected,
+[data-bs-theme="dark"] #fpp-WledEffects-systems label.selected{
+  border-color: #56B760;
+  background-color: rgba(86, 183, 96, 0.2);
+}
+[data-bs-theme="dark"] #availableWledEffects button{
+  background-color: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+}
+[data-bs-theme="dark"] #availableWledEffects button:hover{
+  background-color: #495057;
+}
